@@ -12,25 +12,25 @@ import Message from '../components/Message'
 function ProductScreen({ match }) {
     const history = useNavigate();
     const [qty, setQty] = useState(1)
-    const product_id = useParams()
+    const {id} = useParams()
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails
-    // const product = products.find((p) => p._id === product_id.id)
+    // const product = products.find((p) => p._id === id)
     // const [product, setProduct] = useState([])
 
     useEffect(() => {
         // async function fetchProducts() {
-        //     const { data } = await axios.get(`/api/products/${product_id.id}`)
+        //     const { data } = await axios.get(`/api/products/${id}`)
         //     setProduct(data)
         // }
 
         // fetchProducts()
-        dispatch(listProductDetails(product_id.id))
+        dispatch(listProductDetails(id))
     }, [dispatch])
 
     const addToCartHandler = () => {
-        history(`/cart/${product_id.id}?qty=${qty}`)
+        history(`/cart/${id}?qty=${qty}`)
     }
 
     return (
