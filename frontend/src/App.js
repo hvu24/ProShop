@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import HomeScreen from './screens/HomeScreen.js';
 import ProductScreen from './screens/ProductScreen.js';
+import CartScreen from './screens/CartScreen.js';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Routes>
             <Route path='/' element={<HomeScreen/>} exact />
             <Route path='/product/:id' element={<ProductScreen/>} />
+            <Route path='/cart/:id?' element={<ProductScreen/>} />
+            {/* ? makes the id optional */}
           </Routes>
         </Container>
       </main>
