@@ -7,7 +7,7 @@ import Message from '../components/Message'
 import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
 
-function LoginScreen({}) {
+function LoginScreen({ }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const location = useLocation()
@@ -35,8 +35,8 @@ function LoginScreen({}) {
     <FormContainer>
       <h1>Sign in</h1>
       {error && <Message variant='danger'>{error}</Message>}
-      {loading && <Loader/>}
-      <form onSubmit={submitHandler}>
+      {loading && <Loader />}
+      <Form onSubmit={submitHandler}>
         <Form.Group controlId='email'>
           <Form.Label>Email Address</Form.Label>
           <Form.Control
@@ -58,7 +58,7 @@ function LoginScreen({}) {
         </Form.Group>
 
         <Button type='submit' variant='primary'>Sign In</Button>
-      </form>
+      </Form>
 
       <Row className='py-3'>
         <Col>
