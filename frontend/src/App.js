@@ -9,6 +9,7 @@ import CartScreen from './screens/CartScreen.js';
 import LoginScreen from './screens/LoginScreen.js';
 import RegisterScreen from './screens/RegisterScreen.js';
 import ProfileScreen from './screens/ProfileScreen.js';
+import ShippingScreen from './screens/ShippingScreen.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/login' element={<LoginScreen/>} exact />
             <Route path='/register' element={<RegisterScreen/>} exact />
             <Route path='/profile' element={<ProfileScreen/>} exact />
+            <Route path='/shipping' element={<ShippingScreen/>} exact />
             <Route path='/product/:id' element={<ProductScreen/>} />
             <Route path='/cart/:id?' element={<CartScreen/>} />
             {/* ? makes the id optional */}
